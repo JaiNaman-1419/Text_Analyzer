@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyzer</title>
+    <style>
+      * {
+        font-family: "Baloo 2";
+        color: #f5f5f5;
+        background-color: #101010;
+      }
+      h1 {
+        margin: 2% 0% 0%;
+        font-size: 250%;
+        text-align: center;
+        color: #c70039;
+      }
+      textarea {
+        margin: 4% 2% 2%;
+        width: 94%;
+        font-size: 125%;
+        height: 100%;
+        background-color: #f5f5f5;
+        border: none;
+        padding: 1%;
+        color: #101010;
+        border-radius: 10px;
+        /* opacity: 0.2; */
+      }
+      /* button{
+        font-size: 100%;
+        padding: 6% 15%;
+        border-radius: 5px;
+        border: 2px solid #c70039;
+    }*/
+    button {
+      font-size: 125%;
+      text-align: center;
+      display: block;
+      width: fit-content;
+      margin: 3% auto;
+      border: 2px solid #c70039;
+      border-radius: 5px;
+      padding: 0.5% 4%;
+    }
+    button:hover{
+        background-color: #c70039;
+    }
+      button:active {
+        opacity: 0.7;
+      }
+      label{
+        margin: 0% 0% 0% 1%;
+        font-size: 110%;
+      }
+      label.notfirst{
+        margin-left: 18.3%;
+      }
+      label.secline{
+        margin-left: 17%;
+      }
+      label.secnotfirst{
+        margin-left: 16.5%;
+      }
+      input[type="checkbox"]{
+        margin: 0px 1%;
+        width: 1.1em;
+        height: 1.1em;
+        border: 0.15em solid #c70039;
+        border-radius: 0.15em;
+        transform: translateY(0.1em)
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text Analyzer</h1>
+
+    <form action="/analyzer" method="get">
+      <textarea
+        name="mytext"
+        placeholder="Enter text here"
+        id="textbox"
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <label for="rmpunctuation">
+        <input class="checkbox" type="checkbox" name="rmpunctuation" id="rmpunctuation"/>Remove Punctuation
+      </label>
+      
+      <label for="wordcounter" class="notfirst">
+        <input class="checkbox" type="checkbox" name="wordcounter" id="wordcounter" />Word Counter
+      </label>
+      
+      <label for="uppercase" class="notfirst">
+        <input class="checkbox" type="checkbox" name="uppercase" id="uppercase" />
+        UPPER CASE
+      </label>
+      
+      <label for="lowercase" class="notfirst">
+        <input class="checkbox" type="checkbox" name="lowercase" id="lowercase" />
+        lower case
+      </label>
+
+      <br>
+
+      <label for="charcount" class="secline">
+        <input class="checkbox" type="checkbox" name="charcount" id="charcount" />
+        Character Count
+      </label>
+
+      <label for="newlineremover" class="secnotfirst">
+        <input class="checkbox" type="checkbox" name="newlineremover" id="newlineremover" />
+        New Line Remover
+      </label>
+
+      <label for="spaceremover" class="secnotfirst">
+        <input class="checkbox" type="checkbox" name="spaceremover" id="spaceremover" />
+        Space Remover
+      </label>
+        
+      <button type="submit">Start</button>
+    </form>
+  </body>
+</html>

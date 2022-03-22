@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: #101010;
+        color: #f5f5f5;
+        font-family: "Baloo 2";
+        font-weight: bold;
+        box-sizing: border-box;
+      }
+      h1 {
+        margin: 2% 0% 0%;
+        font-size: 250%;
+        text-align: center;
+        color: #c70039;
+      }
+      pre {
+        text-align: center;
+        font-size: 300%;
+        margin-top: 13%;
+        padding-bottom: 2%;
+        color: #c70039;
+        /* border: 3px solid red; */
+      }
+      /* span{
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <h1>{{ operation }}</h1> -->
+    { % for item in operation % }
+    { % for op, out in item. % }
+
+    { % endfor % }
+    { % endfor % }
+
+    <!-- <div class="container"> -->
+    <!-- <div class="centered">Result: <span><pre>{{ output }}</pre></span></div> -->
+    <!-- <pre>{{output}}</pre> -->
+    <!-- </div> -->
+  </body>
+</html>

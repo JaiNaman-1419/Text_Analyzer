@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <style>
+
+    * {
+        margin: 0%;
+        padding: 0%;
+        background-color: #101010;
+        color: #f5f5f5;
+        font-family: "Baloo 2";
+        font-weight: bold;
+    }
+    h1{
+        margin: 1%;
+        font-size: 350%;
+        text-align: center;
+        color: #c70039;
+    }
+    h2{
+        background-color: #c70039;
+        padding: 2% 0%;
+        /* border-end-end-radius: 10px;
+        border-end-start-radius: 10px; */
+    }
+    span{
+        font-size: 125%;
+        color: #c70039;
+        padding: 4% 0%;
+    }
+    div{
+        font-size: 125%;
+        margin: 5% 2% 1%;
+    }
+    /* pre{
+        display: inline-grid;
+        align-content: space-evenly;
+        justify-content: space-evenly;
+        justify-items: center;
+        width: 25%;
+        margin: 0% 12% 5%;
+        border: 2px solid #f5f5f5;
+    } */
+    pre{
+        display: inline-flex;
+        justify-items: center;
+        width: 100%;
+        margin-bottom: 5%;
+        border: 2px solid #f5f5f5;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    /* .button{
+        width: 295px;
+        margin: 0% auto 10%;
+        border: 2px solid blue;
+    } */
+    button{
+        display: block;
+        width: 15%;
+        margin: 0% auto 10%;
+        padding: 1% 3%;
+        font-size: 100%;
+        border-radius: 5px;
+        border: 2px solid #c70039;
+    }
+    button:hover{
+        background-color: #c70039;
+    }
+    button:active{
+        opacity: 0.7;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Analysis Report</h1>
+
+    <div>
+        {% for item in operation %}    
+        {% for op, out in item.items %}    
+            <pre><h2>{{ op }}:</h2>
+                <span>{{out}}</span>
+            </pre>
+        {% endfor %}
+        {% endfor %}
+    </div>
+
+    <button onclick="window.location.href='/'">Continue Analysis</button>
+
+</body>
+</html>
